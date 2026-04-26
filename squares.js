@@ -23,8 +23,17 @@ function getRandomColor(){
     return color;
 }
 
-//Make a function to add one square
-//Make sure that I set that as the onclick for thebutton
+function addSquare(){
+    let square = document.createElement("div");
+    square.className = "square";
+    square.style.left = parseInt(Math.random()*650)+"px";
+    square.style.top = parseInt(Math.random()*250)+"px";
+    square.style.backgroundColor = getRandomColor();
+    squareArea.append(square);
+}
+
+document.getElementById("addBtn").onclick = addSquare;
+
 //Make a function that changes all the colors of all the squares
 //Make sure the button calls it
 function changeColor(){
