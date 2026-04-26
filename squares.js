@@ -38,6 +38,9 @@ document.getElementById("addBtn").onclick = addSquare;
 //Make sure the button calls it
 function changeColor(){
     let allSquares = document.querySelectorAll(".square");
-    //For loop with an index
-    //Change the color
+    for(let i = 0; i < allSquares.length; i++){
+        allSquares[i].style.backgroundColor = getRandomColor();
+    }
 }
+
+document.getElementById("changeBtn").onclick = changeColor;
